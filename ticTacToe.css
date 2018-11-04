@@ -1,0 +1,65 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+body {
+  height: 100px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  height: 100%;
+  width: 100%;
+}
+
+.grid {
+  width: 618px;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  border: 3px solid green;
+  font-size: 56px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.square:hover {
+  background-color: red;
+}
+
+.winner {
+  color: green;
+  display: none;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.reset {
+  margin: 10px;
+  padding: 10px;
+}
