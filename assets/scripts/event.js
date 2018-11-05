@@ -165,3 +165,39 @@ function declareDraw (draw) {
   //winner = winner === player1 ? 'player2' : 'player1'
   drawResult.html('DRAW!')
 }
+
+const onSignUp = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // take this data and send it to our server
+  // using an HTTP request (POST)
+  api.signUp(data)
+    .then(ui.signUpSuccess) // if request was succesful
+    .catch(ui.signUpFailure) // if request failed
+}
+
+const onSignIn = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // take this data and send it to our server
+  // using an HTTP request (POST)
+  api.signIn(data)
+    .then(ui.signInSuccess) // if request was succesful
+    .catch(ui.signInFailure) // if request failed
+}
+
+const onSignOut = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // take this data and send it to our server
+  // using an HTTP request (POST)
+  api.signOut(data)
+    .then(ui.signOutSuccess) // if request was succesful
+    .catch(ui.signOutFailure) // if request failed
+}
+
+module.exports = {
+  onSignUp,
+  onSignIn,
+  onSignOut
+}

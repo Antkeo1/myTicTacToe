@@ -9,5 +9,7 @@ const authEvents = require('./event.js')
 
 $(() => {
   // your JS code goes here
-  $('#signIn').on('submit', authEvents.onSignUp)
+  $('#sign-up').on('submit', authEvents.onSignUp)
+  $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#sign-out').on('submit', authEvents.onSignOut)
 })
