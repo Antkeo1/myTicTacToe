@@ -56,7 +56,7 @@ dragonBall.on('click', function (e) {
   } else (checkDraw())
 
   // when winner is declared, squares are no longer clickable
-  if ( event.target.innerHTML === player1 || player2) {
+  if (event.target.innerHTML === player1 || player2) {
     event.preventDefault()
   }
 })
@@ -95,7 +95,7 @@ reset.on('click', function (e) {
       event.target.style.color = 'blue'
       currentTurn--
     }
-
+    // if movesMade is 9, then its a draw
     const checkDraw = function () {
       if (movesMade === 9) {
         declareDraw()
@@ -103,17 +103,23 @@ reset.on('click', function (e) {
         console.log('DRAW!')
       }
     }
-
+    // if statment for when checkWinner function is called
     if (checkWinner()) {
+      // the winner will be the oppisite
       const theWinner = currentTurn === 1 ? player1 : player2
+      // declareWinner function gets called
       declareWinner(theWinner)
+      // endGame function gets called
       endGame()
     } else {
+      // checkDraw function gets called
       checkDraw()
     }
 
     // when winner is declared, squares are no longer clickable
+    // this targets my divs to see if value matches player1 or player2
     if (event.target.innerHTML === player1 || player2) {
+      // ends the click event if the condition is true
       event.preventDefault()
     }
   })
@@ -122,8 +128,11 @@ reset.on('click', function (e) {
 // check winner
 function checkWinner () {
   if (movesMade > 4) {
+    // puts each click in an array
     const moves = Array.prototype.slice.call($('.square'))
+    // goes thru array and returns innerHTML
     const results = moves.map((square) => {
+      // returns the value of each square class
       return square.innerHTML
     })
 
@@ -140,6 +149,7 @@ function checkWinner () {
     ]
     // how to find winner function
     return winningCombo.find(function (combo) {
+      // if statement, creating condition each value that gets pushed into empty array
       if (results[combo[0]] !== '' && results[combo[1]] !== '' && results[combo[2]] !== '' &&
     results[combo[0]] === results[combo[1]] && results[combo[1]] === results[combo[2]]) {
         return true
@@ -152,52 +162,22 @@ function checkWinner () {
 
 // to let user know who won
 function declareWinner (winner) {
+  // will display winner where my winner class is
   winnerResult.css('display', 'block')
+  // will display my reset button above my grid
   reset.css('display', 'block')
+  // defines who the winner is between player1 and player2
   winner = winner === player1 ? 'player2' : 'player1'
+  // returns the value in my winner class
   winnerResult.html(winner + ' ' + 'WINS!')
 }
 
 // to let user know its a draw
 function declareDraw (draw) {
+  // will display draw
   drawResult.css('display', 'block')
+  // the reset button
   reset.css('display', 'block')
-  //winner = winner === player1 ? 'player2' : 'player1'
+  // returns the value in the draw class
   drawResult.html('DRAW!')
-}
-
-const onSignUp = event => {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  // take this data and send it to our server
-  // using an HTTP request (POST)
-  api.signUp(data)
-    .then(ui.signUpSuccess) // if request was succesful
-    .catch(ui.signUpFailure) // if request failed
-}
-
-const onSignIn = event => {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  // take this data and send it to our server
-  // using an HTTP request (POST)
-  api.signIn(data)
-    .then(ui.signInSuccess) // if request was succesful
-    .catch(ui.signInFailure) // if request failed
-}
-
-const onSignOut = event => {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  // take this data and send it to our server
-  // using an HTTP request (POST)
-  api.signOut(data)
-    .then(ui.signOutSuccess) // if request was succesful
-    .catch(ui.signOutFailure) // if request failed
-}
-
-module.exports = {
-  onSignUp,
-  onSignIn,
-  onSignOut
 }

@@ -12,33 +12,25 @@ body {
   height: 100px;
 }
 
-.flex-container {
+.grid-container {
   display: flex;
-}
-
-.flex-column {
   flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-center {
+  height: 100%;
   justify-content: center;
   align-items: center;
-}
-
-.grid-container {
-  height: 100%;
   width: 100%;
 }
 
 .grid {
+  display: flex;
+  flex-wrap: wrap;
   width: 618px;
 }
 
 .square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 200px;
   border: 3px solid green;
@@ -55,7 +47,7 @@ img {
 }
 
 .winner {
-  color: green;
+  color: purple;
   display: none;
   font-size: 32px;
   padding: 10px;
