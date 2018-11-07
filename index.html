@@ -15,7 +15,7 @@
 
     </head>
     <body>
-      <form>
+      <form id='sign-up' class='border'>
         <fieldset>
         <legend> Sign Up!</legend>
         <input type='text' name='credentials[email]' placeholder='email'>
@@ -24,11 +24,26 @@
         <input type="submit" value="Sign up!">
       </fieldset>
       </form>
-      <form>
-        <input id="signIn" placeholder='email'>
+
+      <form id='sign-in' class='border2'>
+        <legend>Sign In!</legend>
+        <input type='text' name='credentials[email]' placeholder='email'>
         <input type= 'password' name='credentials[password]' placeholder="password">
-        <button id='signInButton' type='submit'>Sign In</button>
+        <input type="submit" value="Sign in!">
       </form>
+
+      <form id='sign-out' class='border3'>
+      <fieldset>
+        <input type="submit" value="Sign out">
+      </fieldset>
+    </form>
+
+    <form id='changePassword'>
+      <input type= 'password' name='credentials[password]' placeholder="oldpassword">
+      <input type= 'password' name='credentials[password]' placeholder="newpassword">
+      <input type="submit" value="Change Password">
+    </form>
+
       <h1>Let's play Tic-Tac-Toe!</h1>
       <div class= 'grid-container'>
         <div class= 'heading'>
