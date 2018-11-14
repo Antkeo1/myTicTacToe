@@ -12,6 +12,10 @@ body {
   height: 100px;
 }
 
+/* .dbimage {
+  background-image: url('../../dragonBall.jpg');
+} */
+
 .grid-container {
   align-items: center;
   display: flex;
@@ -38,7 +42,7 @@ body {
 }
 
 .square:hover {
-  background-color: red;
+  // background-image: .dbimage;
 }
 
 .winner {
