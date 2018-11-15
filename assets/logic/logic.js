@@ -2,6 +2,7 @@
 const player1 = 'X'
 const player2 = 'O'
 
+// keep track of my moves
 let currentTurn = 1
 let movesMade = 0
 
@@ -21,12 +22,13 @@ dragonBall.on('click', function (e) {
   } else if (event.target.innerHTML === player2) {
     return false
   }
+  // the click event will increment the movesMade up by one
   movesMade++
   // if currentTurn is 1, the value im passing is player 1 which equals X
   // my currentTurn moves up to 2
   if (currentTurn === 1) {
     event.target.innerHTML = player1
-    event.target.style.color = 'orange'
+    event.target.style.color = 'green'
     currentTurn++
   // else if currentTurn doesnt equal 2, the value im passing is player 2
   // player2 is equal to O
@@ -80,7 +82,7 @@ reset.on('click', function (e) {
     // which equals X
     if (currentTurn === 1) {
       event.target.innerHTML = player1
-      event.target.style.color = 'orange'
+      event.target.style.color = 'green'
       // my currentTurn moves up to 2
       currentTurn++
     // else if currentTurn doesnt equal 2,

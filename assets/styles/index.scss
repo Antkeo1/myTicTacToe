@@ -9,12 +9,16 @@ h2 {
 }
 
 body {
+  background-image: url('GOKU.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
   height: 100px;
 }
 
-/* .dbimage {
-  background-image: url('../../dragonBall.jpg');
-} */
+footer {
+  text-align: center;
+}
 
 .grid-container {
   align-items: center;
@@ -31,9 +35,24 @@ body {
   width: 618px;
 }
 
+.border3 {
+  display: none;
+}
+
+.border4 {
+  display: none;
+}
+
+.message {
+  background-image: url('vegeta.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: center;
+}
+
 .square {
   align-items: center;
-  border: 3px solid green;
+  border: 3px solid orange;
   display: flex;
   font-size: 56px;
   height: 200px;
@@ -42,7 +61,8 @@ body {
 }
 
 .square:hover {
-  // background-image: .dbimage;
+  background-image: url('dragonBall.jpg');
+  background-size: contain;
 }
 
 .winner {

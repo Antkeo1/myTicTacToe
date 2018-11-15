@@ -15,6 +15,7 @@
 
     </head>
     <body>
+    <header>
       <form id='sign-up' class='border'>
         <fieldset>
         <legend> Sign Up!</legend>
@@ -40,13 +41,14 @@
 
     <form id='change-password' class='border4'>
     <fieldset>
-      <input type= 'password' name='credentials[password]' placeholder="oldpassword">
-      <input type= 'password' name='credentials[new_password]' placeholder="newpassword">
+      <input type= 'password' name='old_password' placeholder="oldpassword">
+      <input type= 'password' name='new_password' placeholder="newpassword">
       <input type="submit" value="Change Password">
     </fieldset>
     </form>
-
-      <h1>Let's play Tic-Tac-Toe!</h1>
+  </header>
+  <main>
+      <h1>Let's play Tic-Tac-GOKU!</h1>
       <div class= 'grid-container'>
         <div class= 'heading'>
           <div class='winner draw'></div>
@@ -63,6 +65,17 @@
           <div class= 'square' id= '8'></div>
           <div class= 'square' id= '9'></div>
         </div>
+    </main>
     </body>
+        <footer class="clearfix">
+            <p class="copyright">
+                Copyright 2018
+            </p>
+            <p class="message">
+                Created by <span class="name">Antonio Keo</span>
+                <a href= 'https://github.com/Antkeo1'>www.github.com/Antkeo1</a>
+            </p>
 
-  </html>
+        </footer>
+        <hr>
+</html>
