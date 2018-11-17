@@ -26,6 +26,7 @@ const signInSuccess = data => {
   $('#message').addClass('success')
   $('.border, .border2').hide()
   $('.border3, .border4').show()
+  $('.gameContent').show()
   console.log('signInSuccess ran. Data is :', data)
   alert('Sign In successful')
 }
@@ -60,7 +61,9 @@ const signOutSuccess = data => {
   store.user = null
   $('#message').removeClass()
   $('#message').addClass('success')
-  $('.border2, .border4').show()
+  $('.border, .border2').show()
+  $('.border3, .border4').hide()
+  $('.gameContent').hide()
   console.log('signOutSuccess ran. Data is :', data)
   alert('Sign Out successful Goodbye')
 }

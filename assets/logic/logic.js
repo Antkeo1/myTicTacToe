@@ -1,3 +1,5 @@
+const store = require('../auth/store.js')
+require('../auth/ui.js')
 // my variables
 const player1 = 'X'
 const player2 = 'O'
@@ -10,6 +12,7 @@ const dragonBall = $('.square')
 const winnerResult = $('.winner')
 const drawResult = $('.draw')
 const reset = $('.reset')
+const newGame = $('.createGame')
 const endGame = function () {
   dragonBall.off()
 }
@@ -69,7 +72,7 @@ reset.on('click', function (e) {
   currentTurn = 1
   movesMade = 0
 
-  // my click event
+  // my click event added for reset button
   dragonBall.on('click', function (e) {
     // to make squares unclickable after its been clicked
     if (event.target.innerHTML === player1) {
