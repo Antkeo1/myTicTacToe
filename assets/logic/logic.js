@@ -1,5 +1,4 @@
-const store = require('../auth/store.js')
-require('../auth/ui.js')
+
 // my variables
 const player1 = 'X'
 const player2 = 'O'
