@@ -8,7 +8,11 @@ const signUpSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('signUpSuccess ran. Data is :', data)
-  alert('Sign Up successful')
+  $('h2').text('Sign Up Success Please Sign in').show()
+  $('.create-game').on('click', function () {
+    $('.gameContent').show()
+    $('h2').text('').hide()
+  })
 }
 
 const signUpFailure = error => {
@@ -29,7 +33,7 @@ const signInSuccess = data => {
   $('h2').text('Sign In Success').show()
   $('.create-game').on('click', function () {
     $('.gameContent').show()
-    $('h2').text('Sign In Success').hide()
+    $('h2').text('').hide()
   })
   console.log('signInSuccess ran. Data is :', data)
 }
