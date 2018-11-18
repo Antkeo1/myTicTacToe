@@ -55,7 +55,6 @@ const onCreateGameClick = function (event) {
 
 const onMakeMove = function (event) {
   event.preventDefault()
-
   // think of putting in whatever logic
   // gets your move data here instead
   const cellData = getFormFields(event.target)

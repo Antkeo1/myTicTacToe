@@ -26,9 +26,12 @@ const signInSuccess = data => {
   $('#message').addClass('success')
   $('.border, .border2').hide()
   $('.border3, .border4').show()
-  $('.gameContent').show()
+  $('h2').text('Sign In Success').show()
+  $('.create-game').on('click', function () {
+    $('.gameContent').show()
+    $('h2').text('Sign In Success').hide()
+  })
   console.log('signInSuccess ran. Data is :', data)
-  alert('Sign In successful')
 }
 
 const signInFailure = error => {
@@ -63,7 +66,7 @@ const signOutSuccess = data => {
   $('#message').addClass('success')
   $('.border, .border2').show()
   $('.border3, .border4').hide()
-  $('.gameContent').hide()
+  $('.heading, .grid').hide()
   console.log('signOutSuccess ran. Data is :', data)
   alert('Sign Out successful Goodbye')
 }

@@ -2,14 +2,16 @@
 
 h1 {
   text-align: center;
+  color: green;
 }
 
 h2 {
   text-align: center;
+  color: red;
 }
 
 body {
-  background-image: url('public/GOKU.png');
+  background-image: url('./public/GOKU.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -44,7 +46,7 @@ footer {
 }
 
 .message {
-  background-image: url('public/vegeta.jpg');
+  background-image: url('./public/vegeta.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   float: center;
@@ -61,7 +63,7 @@ footer {
 }
 
 .square:hover {
-  background-image: url('public/dragonBall.jpg');
+  background-image: url('./public/dragonBall.jpg');
   background-size: contain;
 }
 

@@ -50,7 +50,7 @@ const createGame = function () {
   })
 }
 
-const patchMove = function (data) {
+const patchMove = data => {
   return $.ajax({
     url: config.apiUrl + '/games/2213',
     method: 'PATCH',
