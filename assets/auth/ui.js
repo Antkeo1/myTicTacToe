@@ -32,7 +32,7 @@ const signInSuccess = data => {
   $('.border3, .border4').show()
   $('h2').text('Sign In Success').show()
   $('.create-game').on('click', function () {
-    $('.gameContent').show()
+    $('.gameContent, .grid-container, .not-a-game-board, .heading, .reset, .winner, .draw, .grid').show()
     $('h2').text('').hide()
   })
   console.log('signInSuccess ran. Data is :', data)
@@ -71,8 +71,8 @@ const signOutSuccess = data => {
   $('.border, .border2').show()
   $('.border3, .border4').hide()
   $('.heading, .grid').hide()
+  $('h2').text('Sign in Success').hide()
   console.log('signOutSuccess ran. Data is :', data)
-  alert('Sign Out successful Goodbye')
 }
 
 const signOutFailure = error => {
