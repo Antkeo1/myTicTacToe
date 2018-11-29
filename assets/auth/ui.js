@@ -71,8 +71,8 @@ const signOutSuccess = data => {
   $('.border, .border2').show()
   $('.border3, .border4').hide()
   $('.heading, .grid').hide()
-  $('h2').text('Sign in Success').hide()
   console.log('signOutSuccess ran. Data is :', data)
+  alert('Sign Out successful Goodbye')
 }
 
 const signOutFailure = error => {
