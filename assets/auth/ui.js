@@ -1,4 +1,4 @@
-'use strict'
+/*'use strict'
 
 const store = require('./store.js')
 
@@ -7,12 +7,13 @@ const signUpSuccess = data => {
   $('#message').text('Signed up successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#sign-up').trigger('reset')
   console.log('signUpSuccess ran. Data is :', data)
-  $('h2').text('Sign Up Success Please Sign in').show()
-  $('.create-game').on('click', function () {
-    $('.gameContent').show()
-    $('h2').text('').hide()
-  })
+  //$('h2').text('Sign Up Success Please Sign in').show()
+  //$('.create-game').on('click', function () {
+    //$('.gameContent').show()
+    //$('h2').text('').hide()
+  // })
 }
 
 const signUpFailure = error => {
@@ -28,10 +29,11 @@ const signInSuccess = data => {
   $('#message').text('Signed in successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
-  $('.border, .border2').hide()
-  $('.border3, .border4').show()
-  $('h2').text('Sign In Success').show()
-  $('.create-game').on('click', function () {
+  // $('#sign-in').trigger('reset')
+  // $('.border, .border2').hide()
+  // $('.border3, .border4').show()
+  //$('h2').text('Sign In Success').show()
+  /* $('.create-game').on('click', function () {
     $('.gameContent, .grid-container, .not-a-game-board, .heading, .reset, .winner, .draw, .grid').show()
     $('h2').text('').hide()
   })
@@ -51,6 +53,8 @@ const changePasswordSuccess = data => {
   $('#message').text('Password changed successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
+  // clears the input after filling it out
+  // $('#change-password').trigger('reset')
   console.log('changePasswordSuccess ran. Data is :', data)
   alert('Password Change successful')
 }
@@ -68,9 +72,9 @@ const signOutSuccess = data => {
   store.user = null
   $('#message').removeClass()
   $('#message').addClass('success')
-  $('.border, .border2').show()
-  $('.border3, .border4').hide()
-  $('.heading, .grid').hide()
+  // $('.border, .border2').show()
+  // $('.border3, .border4').hide()
+  // $('.heading, .grid').hide()
   console.log('signOutSuccess ran. Data is :', data)
   alert('Sign Out successful Goodbye')
 }
@@ -92,4 +96,4 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
-}
+}*/

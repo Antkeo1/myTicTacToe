@@ -9,10 +9,10 @@ const authEvents = require('./event.js')
 
 $(() => {
   // your JS code goes here
-  $('#sign-up').on('submit', authEvents.onSignUp)
-  $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#sign-out').on('submit', authEvents.onSignOut)
-  $('#change-password').on('submit', authEvents.onChangePassword)
-  $('.create-game').on('click', authEvents.onCreateGameClick)
-  $('.not-a-game-board').on('submit', authEvents.onMakeMove)
+  //$('#sign-up').on('submit', authEvents.onSignUp)
+  //$('#sign-in').on('submit', authEvents.onSignIn)
+  //$('#sign-out').on('submit', authEvents.onSignOut)
+  //$('#change-password').on('submit', authEvents.onChangePassword)
+  //$('.create-game').on('click', authEvents.onCreateGameClick)
+  //$('.not-a-game-board').on('submit', authEvents.onMakeMove)
 })

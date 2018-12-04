@@ -1,4 +1,4 @@
-'use strict'
+/* 'use strict'
 
 require('../logic/logic.js')
 const getFormFields = require('../../lib/get-form-fields.js')
@@ -82,4 +82,4 @@ module.exports = {
   onSignOut,
   onCreateGameClick,
   onMakeMove
-}
+}*/
