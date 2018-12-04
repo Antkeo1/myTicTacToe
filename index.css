@@ -37,16 +37,15 @@ footer {
   width: 618px;
 }
 
-.border3 {
+/*.border3 {
   display: none;
 }
 
 .border4 {
   display: none;
-}
+}*/
 
 .message {
-  background-image: url('./public/vegeta.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   float: center;
@@ -63,7 +62,7 @@ footer {
 }
 
 .square:hover {
-  background-image: url('./public/dragonBall.jpg');
+  background-color:red;
   background-size: contain;
 }
 
